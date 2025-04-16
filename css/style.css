@@ -80,9 +80,41 @@ p {
     background: rgba(0, 0, 0, 0.8);
 }
 
-.container-left h1 {
+.welcome {
     width: 100%;
     text-align: left;
+    position: relative;
+    cursor: crosshair;
+    
+}
+
+.welcome::before {
+
+  
+}
+
+.welcome:hover::before {
+  content: "";
+  border-bottom: 2px solid cyan;
+  position: absolute;
+  bottom: -.3rem;
+  left: 0;
+  height: .5rem;
+  width: 90%;
+  animation: slidein .5s reverse ease-in-out;
+  
+}
+
+@keyframes slidein {
+  from {
+    width: 0%;
+    width: 90%;
+  }
+  
+  to {
+    width: 90%;
+    width: 0%;
+  }
 }
 
 .container-left p {
